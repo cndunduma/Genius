@@ -1,39 +1,87 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
 
 public class Main {
 
-    // private static HttpURLConnection connection;
+    private static HttpURLConnection connection;
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, JSONException, MalformedURLException {
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://genius.p.rapidapi.com/artists/16775/songs"))
-                .header("x-rapidapi-host", "genius.p.rapidapi.com")
-                .header("x-rapidapi-key", "f2f9cc3f95msh34c0949210b8835p1e4273jsncb114eb50412")
-                .method("GET", HttpRequest.BodyPublishers.noBody())
-                .build();
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        String search_term;
 
-    }
+        BufferedReader reader;
+        String line;
+        StringBuffer responseContent = new StringBuffer();
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Please enter artist:");
+        search_term = myObj.nextLine();
+        try {
+            URL url = new URL("https://genius.com/api/search/song?page=1&q=" + search_term);
+            connection = (HttpURLConnection) url.openConnection();
 
-    public static String parse(String responseBody) {
-        JSONArray songs = new JSONArray(responseBody);
-        for (int i = 0; i < songs.length(); i++) {
-            JSONObject song = songs.getJSONObject(i);
-            int id = song.getInt("id");
-            String title = song.getString("full_title");
-            System.out.println(title);
+            // Request setup
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(5000);// 5000 milliseconds = 5 seconds
+            connection.setReadTimeout(5000);
+
+            // Test if the response from the server is successful
+            int status = connection.getResponseCode();
+
+            if (status >= 299) {
+                reader = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseContent.append(line);
+                }
+                reader.close();
+            } else {
+                reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseContent.append(line);
+                }
+                reader.close();
+            }
+            System.out.println(responseContent.toString());
+
+            JSONObject obj = new JSONObject(responseContent.toString());
+            JSONArray jsonArray = new JSONArray();
+            int length = obj.length();
+            jsonArray.put(obj);
+           // System.out.println(obj.getJSONObject("response"));
+            System.out.println(jsonArray);
+
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            JsonParser jp = new JsonParser();
+            JsonElement je = jp.parse(responseContent.toString());
+            String prettyJsonString = gson.toJson(je);
+            System.out.println(prettyJsonString);
+
+          //System.out.println(responseContent.get);
+
+
+        } finally {
+            connection.disconnect();
+
         }
-        return null;
     }
-}
+
+        }
+       // return null;
+
+
+
 
 

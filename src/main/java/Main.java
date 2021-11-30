@@ -1,7 +1,3 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,19 +21,21 @@ public class Main {
         BufferedReader reader;
         String line;
         StringBuffer responseContent = new StringBuffer();
+
         Scanner myObj = new Scanner(System.in);
         System.out.println("Please enter artist:");
         search_term = myObj.nextLine();
+
         try {
             URL url = new URL("https://genius.com/api/search/song?page=1&q=" + search_term);
             connection = (HttpURLConnection) url.openConnection();
 
-            // Request setup
+            // Setting up request to obtain json data from API with the "GET" request method
             connection.setRequestMethod("GET");
-            connection.setConnectTimeout(5000);// 5000 milliseconds = 5 seconds
+            connection.setConnectTimeout(5000);//
             connection.setReadTimeout(5000);
 
-            // Test if the response from the server is successful
+            // Testing response from server
             int status = connection.getResponseCode();
 
             if (status >= 299) {
@@ -53,26 +51,24 @@ public class Main {
                 }
                 reader.close();
             }
-            System.out.println(responseContent.toString());
+            //System.out.println(responseContent.toString());
 
-            JSONObject obj = new JSONObject(responseContent.toString());
-            JSONArray jsonArray = new JSONArray();
-            int length = obj.length();
-            jsonArray.put(obj);
-           // System.out.println(obj.getJSONObject("response"));
-            System.out.println(jsonArray);
+            JSONObject obj = new JSONObject(responseContent.toString()); //Turns response from API into JSONObject that is used to retrieve other objects and arrays
 
+            JSONObject obj1 = obj.getJSONObject("response"); //Pulling response JSONObject from original API data
+            JSONArray obj1_array = obj1.getJSONArray("sections"); //Pulling JSONArray sections from the response object
+            JSONObject obj2 = obj1_array.getJSONObject(0); //Pulling index 0 JSONObject that contains the hits array
+            JSONArray obj2_array = obj2.getJSONArray("hits"); //Pulling hits array that contains top 10 results from search
 
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            JsonParser jp = new JsonParser();
-            JsonElement je = jp.parse(responseContent.toString());
-            String prettyJsonString = gson.toJson(je);
-            System.out.println(prettyJsonString);
+            //For loop that loops through each result to pull the titles of the top 10 hits, and prints them
+            for (int i = 0; i < obj2_array.length(); i++) {
+                JSONObject obj3 = obj2_array.getJSONObject(i); //Pulling each object index for each result
+                JSONObject obj4 = obj3.getJSONObject("result"); //Pulling each result from each index
 
-          //System.out.println(responseContent.get);
+                System.out.println(obj4.getString("full_title")); //Prints each title from the results obtained
+            }
 
-
-        } finally {
+        } finally { //Disconnects connection to API server when search task is completed
             connection.disconnect();
 
         }

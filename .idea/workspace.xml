@@ -10,23 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d09caf23-b0f3-47d7-bc5c-cffe18dd887d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/FinalVersion_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/gen_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalVersion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/genius/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/genius/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/genius/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/genius/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/target/classes/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/target/classes/genius.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/target/classes/genius.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/genius/target/classes/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/src/main/java/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/target/classes/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +106,19 @@
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\bcaro\Downloads\openjfx-17.0.1_windows-x64_bin-sdk\javafx-sdk-17.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="FinalVersion" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="FinalVersion" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />

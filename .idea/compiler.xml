@@ -7,11 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gen" />
-        <module name="FinalVersion" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FinalVersion" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

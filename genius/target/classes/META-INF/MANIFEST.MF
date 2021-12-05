@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: gson-2.8.9.jar javafx-graphics-11.0.2-win.jar httpcore-4.4.4
+ .jar json-20210307.jar json-simple-1.1.1.jar netty-codec-socks-4.1.60.F
+ inal.jar hamcrest-core-1.1.jar javafx-base-11.0.2-win.jar async-http-cl
+ ient-2.12.3.jar httpasyncclient-4.1.1.jar netty-codec-4.1.60.Final.jar 
+ netty-transport-4.1.60.Final.jar httpclient-4.5.2.jar reactive-streams-
+ 1.0.3.jar jakarta.activation-1.2.2.jar unirest-java-1.4.9.jar javafx-fx
+ ml-11.0.2.jar netty-handler-proxy-4.1.60.Final.jar javafx-controls-11.0
+ .2.jar commons-logging-1.2.jar javafx-graphics-11.0.2.jar netty-transpo
+ rt-native-unix-common-4.1.60.Final.jar junit-4.10.jar slf4j-api-1.7.30.
+ jar async-http-client-netty-utils-2.12.3.jar javafx-fxml-11.0.2-win.jar
+  netty-codec-http-4.1.60.Final.jar netty-resolver-4.1.60.Final.jar nett
+ y-reactive-streams-2.0.4.jar httpcore-nio-4.4.4.jar javafx-base-11.0.2.
+ jar javafx-controls-11.0.2-win.jar httpmime-4.5.2.jar commons-codec-1.9
+ .jar netty-handler-4.1.60.Final.jar netty-transport-native-kqueue-4.1.6
+ 0.Final-osx-x86_64.jar netty-common-4.1.60.Final.jar netty-transport-na
+ tive-epoll-4.1.60.Final-linux-x86_64.jar netty-buffer-4.1.60.Final.jar
+

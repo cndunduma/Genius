@@ -10,18 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d09caf23-b0f3-47d7-bc5c-cffe18dd887d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/src/main/java/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeniusFinal/gen/target/classes/Main.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/genius/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/genius/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/genius/src/main/java/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/genius/src/main/java/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,5 +150,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

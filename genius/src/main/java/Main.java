@@ -11,7 +11,17 @@ import java.util.Objects;
 
 public class Main extends Application {
 
-
+    /**
+     * Genius: Artist Top 10 Songs
+     * The Genius: Artist Top 10 Songs program searches for an artist
+     * in the Genius database and returns the top 10 songs for that
+     * artist.
+     *
+     * @author  Carolina Ndunduma
+     * @author Jade Fortson
+     * @author Tracey Carrera
+     * @since   2021-12-03
+     */
 
     @Override
     public void start(Stage primaryStage) throws IOException {

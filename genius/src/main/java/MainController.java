@@ -29,6 +29,7 @@ public class MainController {
     private static HttpURLConnection connection;
 
     @FXML
+
     void generateArtist(ActionEvent event) throws MalformedURLException, IOException {
 
         BufferedReader reader;
